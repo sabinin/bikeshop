@@ -5,18 +5,29 @@
     <title>Bike shop</title>
     <meta http-equiv="x-ua-compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description"content="" />
+    <meta name="description" content="" />
     <meta name="keywords" content=""/>
     <link rel="icon" href="favicon.ico"/>
-    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <!-- Important Owl stylesheet -->
     <link rel="stylesheet" href="css/owl.carousel.css">
     <!-- Custom style -->
     <link rel="stylesheet" href="css/style.css"/>
-    <!-- for IE9 -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,400italic,700' rel='stylesheet' type='text/css'>    <!--[if lte IE 9]>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <!-- end -->
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <link rel="stylesheet" href="css/style-ie8.css"/>
+    <script>
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+    </script>
+    <![endif]-->
 </head>
 <body>
     <header>
@@ -71,6 +82,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="scroll">
+                    <img class="scroll-active" src="img/Scroll_icon_active.png" alt="scroll-active"/>
                 </div>
                 <div class="item active" style="background-image: url('img/Slider_Photo01.jpg')">
                     <div class="carousel-caption">
@@ -126,11 +138,11 @@
 
             <!-- Controls -->
             <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
             <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <div class="glyphicon-chevron-right" aria-hidden="true"></div>
                 <span class="sr-only">Next</span>
             </a>
         </div>
@@ -139,29 +151,35 @@
         <div class="container">
             <h2>categories</h2>
             <div class="row">
-                <div class="col-md-4 col-sm-12 cat-item">
-                    <img class="cat-img" src="img/CATEGORIES_PHOTO_01.jpg" alt=""/>
-                    <div class="caption">
-                        <h5>FIXED / SINGLE SPEED</h5>
-                        <p>Are You ready for the 27.5 Revolution?</p>
+                <div class="col-md-4 col-sm-12 ">
+                    <div class="cat-item">
+                        <img class="cat-img" src="img/CATEGORIES_PHOTO_01.jpg" alt=""/>
+                        <div class="caption">
+                                <h5>FIXED / SINGLE SPEED</h5>
+                                <p>Are You ready for the 27.5 Revolution?</p>
+                            <button type="button" class="btn btn-default go-to-store">go to store</button>
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-default go-to-store">go to store</button>
                 </div>
-                <div class="col-md-4 col-sm-12 cat-item">
-                    <img class="cat-img" src="img/CATEGORIES_PHOTO_02.jpg" alt=""/>
-                    <div class="caption">
-                        <h5>PREMIUM SERIES</h5>
-                        <p>Exclusive  Bike Components</p>
+                <div class="col-md-4 col-sm-12">
+                    <div class="cat-item">
+                        <img class="cat-img" src="img/CATEGORIES_PHOTO_02.jpg" alt=""/>
+                        <div class="caption">
+                            <h5>PREMIUM SERIES</h5>
+                            <p>Exclusive  Bike Components</p>
+                            <button type="button" class="btn btn-default go-to-store">go to store</button>
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-default go-to-store">go to store</button>
                 </div>
-                <div class="col-md-4 col-sm-12 cat-item">
-                    <img class="cat-img" src="img/CATEGORIES_PHOTO_03.jpg" alt=""/>
-                    <div class="caption">
-                        <h5>CITY BIKES</h5>
-                        <p>Street Playground</p>
+                <div class="col-md-4 col-sm-12">
+                    <div class="cat-item">
+                        <img class="cat-img" src="img/CATEGORIES_PHOTO_03.jpg" alt=""/>
+                        <div class="caption">
+                            <h5>CITY BIKES</h5>
+                            <p>Street Playground</p>
+                            <button type="button" class="btn btn-default go-to-store">go to store</button>
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-default go-to-store">go to store</button>
                 </div>
             </div>
         </div>
@@ -197,7 +215,7 @@
                     </div>
                     <div class="pull-right">
                         <form action="#">
-                            <select name="bk-options" id="bk-options1">
+                            <select name="bike-options">
                                 <option>OPTION</option>
                                 <option>OPTION</option>
                                 <option>OPTION</option>
@@ -213,7 +231,7 @@
                     </div>
                     <div class="pull-right">
                         <form action="#">
-                            <select name="bk-options" id="bk-options1">
+                            <select name="bike-options">
                                 <option>OPTION</option>
                                 <option>OPTION</option>
                                 <option>OPTION</option>
@@ -229,7 +247,7 @@
                     </div>
                     <div class="pull-right">
                         <form action="#">
-                            <select name="bk-options" id="bk-options1">
+                            <select name="bike-options">
                                 <option>OPTION</option>
                                 <option>OPTION</option>
                                 <option>OPTION</option>
@@ -245,7 +263,7 @@
                     </div>
                     <div class="pull-right">
                         <form action="#">
-                            <select name="bk-options" id="bk-options1">
+                            <select name="bike-options">
                                 <option>OPTION</option>
                                 <option>OPTION</option>
                                 <option>OPTION</option>
@@ -261,7 +279,7 @@
                     </div>
                     <div class="pull-right">
                         <form action="#">
-                            <select name="bk-options" id="bk-options1">
+                            <select name="bike-options">
                                 <option>OPTION</option>
                                 <option>OPTION</option>
                                 <option>OPTION</option>
@@ -277,7 +295,7 @@
                     </div>
                     <div class="pull-right">
                         <form action="#">
-                            <select name="bk-options" id="bk-options1">
+                            <select name="bike-options">
                                 <option>OPTION</option>
                                 <option>OPTION</option>
                                 <option>OPTION</option>
@@ -293,7 +311,7 @@
                     </div>
                     <div class="pull-right">
                         <form action="#">
-                            <select name="bk-options" id="bk-options1">
+                            <select name="bike-options">
                                 <option>OPTION</option>
                                 <option>OPTION</option>
                                 <option>OPTION</option>
@@ -309,7 +327,7 @@
                     </div>
                     <div class="pull-right">
                         <form action="#">
-                            <select name="bk-options" id="bk-options1">
+                            <select name="bike-options">
                                 <option>OPTION</option>
                                 <option>OPTION</option>
                                 <option>OPTION</option>
@@ -369,6 +387,7 @@
     <script src="js/bootstrap.js"></script>
     <!-- Include js plugin -->
     <script src="js/owl.carousel.js"></script>
+
     <script type="text/javascript">
         $(function () {
 
@@ -378,7 +397,6 @@
             });
 
         });
-
         $(document).ready(function() {
             $("#gallery").owlCarousel({
                 autoPlay: 2000, //Set AutoPlay to 3 seconds

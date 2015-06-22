@@ -3954,9 +3954,9 @@ button.close {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 15%;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+  width: 0;
+  opacity: 0;
+  filter: none;
   font-size: 20px;
   color: #ffffff;
   text-align: center;
@@ -4074,6 +4074,7 @@ button.close {
     height: 30px;
     margin-top: -15px;
     font-size: 30px;
+    z-index: 10;
   }
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {

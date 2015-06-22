@@ -1,0 +1,69 @@
+.carousel{
+    height: 764px;
+}
+.carousel .item{
+    height: 764px;
+}
+.carousel .item:before{
+    height: 764px;
+    background-image: url(../img/PhotoFilter.png);
+    background-size: cover;
+    width: 100%;
+    background-position: 50% 50%;
+}
+.dropdown{
+    margin-top: -9px;
+}
+.dropdown a{
+    margin-top: 0;
+}
+
+/* ---------------controls--------------*/
+
+.glyphicon-chevron-left {
+    width: 58px!important;
+    height: 58px!important;
+    background-image: url('../img/Left_arrow.png');
+    left: 0;
+    top: 48.7%;
+    z-index: 20;
+    margin: 0;
+    padding: 0;
+@media (max-width: 768px) {
+    top: 25%;
+
+}
+}
+.glyphicon-chevron-right {
+    width: 58px!important;
+    height: 58px!important;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/Right_arrow.png');
+    background-position: 50%, 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 9.3%;
+    top: 48.7%;
+    z-index: 20;
+@media (max-width: 768px) {
+    top: 25%;
+}
+}
+.cat-item:hover:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: " ";
+    width:348px;
+    height: 285px;
+    background-image: url('../img/filter.png');
+    background-position: 50%, 50%;
+    border-style: none;
+    border-width: 0;
+    border-color: transparent;
+    z-index: 10;
+}
+form{
+    float: none;
+}
