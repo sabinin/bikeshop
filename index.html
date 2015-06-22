@@ -31,6 +31,9 @@
 </head>
 <body>
     <header>
+        <div class="scroll">
+            <img class="scroll-active" src="img/Scroll_icon_active.png" alt="scroll-active"/>
+        </div>
         <nav class="navbar top-navbar">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -81,9 +84,6 @@
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-                <div class="scroll">
-                    <img class="scroll-active" src="img/Scroll_icon_active.png" alt="scroll-active"/>
-                </div>
                 <div class="item active" style="background-image: url('img/Slider_Photo01.jpg')">
                     <div class="carousel-caption">
                         <div class="caption-item">
@@ -151,7 +151,7 @@
         <div class="container">
             <h2>categories</h2>
             <div class="row">
-                <div class="col-md-4 col-sm-12 ">
+                <div class="col-lg-4 col-md-3 col-sm-12 ">
                     <div class="cat-item">
                         <img class="cat-img" src="img/CATEGORIES_PHOTO_01.jpg" alt=""/>
                         <div class="caption">
@@ -161,7 +161,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-3 col-sm-12">
                     <div class="cat-item">
                         <img class="cat-img" src="img/CATEGORIES_PHOTO_02.jpg" alt=""/>
                         <div class="caption">
@@ -171,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-3 col-sm-12">
                     <div class="cat-item">
                         <img class="cat-img" src="img/CATEGORIES_PHOTO_03.jpg" alt=""/>
                         <div class="caption">
@@ -198,7 +198,7 @@
                     </div>
                     <div class="pull-right">
                         <form action="#">
-                            <select name="bike-options">
+                            <select class="selectList" name="bike-options">
                                 <option>OPTION</option>
                                 <option>OPTION</option>
                                 <option>OPTION</option>
@@ -217,7 +217,7 @@
                     </div>
                     <div class="pull-right">
                         <form action="#">
-                            <select name="bike-options">
+                            <select class="selectList" name="bike-options">
                                 <option>OPTION</option>
                                 <option>OPTION</option>
                                 <option>OPTION</option>
@@ -236,7 +236,7 @@
                     </div>
                     <div class="pull-right">
                         <form action="#">
-                            <select name="bike-options">
+                            <select class="selectList" name="bike-options">
                                 <option>OPTION</option>
                                 <option>OPTION</option>
                                 <option>OPTION</option>
@@ -255,7 +255,7 @@
                     </div>
                     <div class="pull-right">
                         <form action="#">
-                            <select name="bike-options">
+                            <select class="selectList" name="bike-options">
                                 <option>OPTION</option>
                                 <option>OPTION</option>
                                 <option>OPTION</option>
@@ -407,7 +407,7 @@
 <!-- bootstrap js -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- Include js plugin -->
     <script src="js/owl.carousel.js"></script>
 
@@ -421,7 +421,6 @@
 
         });
         $(document).ready(function() {
-
             $("#gallery").owlCarousel({
                 items : 3,
                 itemsDesktop : false,
@@ -431,7 +430,23 @@
                 pagination : false
 
             })
-
+        });
+        //placeholder fix and IE8
+        $(document).ready(function () {
+            if (!$.support.placeholder) {
+                $("[placeholder]").focus(function () {
+                    if ($(this).val() == $(this).attr("placeholder")) $(this).val("");
+                }).blur(function () {
+                    if ($(this).val() == "") $(this).val($(this).attr("placeholder"));
+                }).blur();
+                $("[placeholder]").parents("form").submit(function () {
+                    $(this).find('[placeholder]').each(function() {
+                        if ($(this).val() == $(this).attr("placeholder")) {
+                            $(this).val("");
+                        }
+                    });
+                });
+            }
         });
     </script>
 </body>
