@@ -423,9 +423,8 @@ header{
   padding-bottom: 35px;
 }
 #gallery .owl-item{
-  .item{
-    padding-left: 20px;
-    padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
     img{
       max-width: 100%;
     }
@@ -461,7 +460,6 @@ header{
         color: #000;
         margin-right: 10px;
       }
-    }
   }
 }
 .contact-us{
@@ -583,4 +581,18 @@ h3{
   left: auto;
   right: 0;
   background-image:none;
+}
+input, input[type="password" i], input[type="search" i] {
+  -webkit-appearance: textfield;
+  padding: 1px;
+  background-color: white;
+  border: 2px inset;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  -webkit-rtl-ordering: logical;
+  -webkit-user-select: text;
+  cursor: auto;
 }
