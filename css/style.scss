@@ -58,7 +58,6 @@ header{
         font-weight: 700;
         line-height: 2.166;
         text-transform: uppercase;
-        color: #fff;
         &:focus,
         &:active,
         &:hover {
@@ -68,17 +67,25 @@ header{
           @media (max-width: 768px) {
             border-radius: 0;
             background-color: transparent;
-            color: #fff;
+            color: #000;
           }
         }
       }
     }
     li {
+      color: #000;
       &:hover{
         .dropdown-menu{
+          li{
+            color: #000;
+          }
           display: block;
           border-radius: 0 0 10px 10px;
           z-index: 500;
+          color: #000!important;
+          a{
+            color: #000!important;
+          }
         }
       }
       @media (max-width: 768px) {
@@ -88,10 +95,11 @@ header{
           background-color: transparent;
           width: 100%;
           margin-left: 10px;
+          color:000;
             :hover,
             :active{
               background-color: transparent;
-              color: #fff;
+              color: #000;
             }
            }
       }
